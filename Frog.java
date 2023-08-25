@@ -7,7 +7,7 @@ private staticfinal double FROG_HEIGHT = 48;
     frogImage = new visibeImage(i, new Location(10,10), c);
   }
 public boolean overlaps(VisibleImage vehicleImage){
-  
+  return frogImage.overlaps(vehicleImage);
 }
   
 }

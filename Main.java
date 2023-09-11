@@ -95,5 +95,14 @@ public class Main extends WindowController implements KeyListener{
    {
    
    }
-         
+  void	keyPressed(KeyEvent e)
+  {
+    
+  }
+ void	keyReleased(KeyEvent e){
+   
+ } 
+  void	keyTyped(KeyEvent e){
+    
+  }
 }

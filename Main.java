@@ -38,7 +38,7 @@ public class Main extends WindowController implements KeyListener{
       // Draw the background
       FilledRect highway = new FilledRect (HIGHWAY_LEFT, HIGHWAY_TOP, 
                                            HIGHWAY_LENGTH, HIGHWAY_WIDTH, canvas);
-      
+      Frog juan = new Frog(getImage("froggy.gif"),canvas);
       // Draw the lane dividers
       int whichLine = 1;
       while (whichLine < NUM_LANES) {

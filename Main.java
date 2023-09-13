@@ -24,7 +24,7 @@ public class Main extends WindowController implements KeyListener{
 
    // This method currently just draws the highway.  You will have to add
    // instructions to create the frog and the Lane ActiveObjects.
-   
+   Frog juan;
    public static void main(String[] args) { 
    new Main().startController(400,400); 
 	} 
@@ -38,7 +38,7 @@ public class Main extends WindowController implements KeyListener{
       // Draw the background
       FilledRect highway = new FilledRect (HIGHWAY_LEFT, HIGHWAY_TOP, 
                                            HIGHWAY_LENGTH, HIGHWAY_WIDTH, canvas);
-      Frog juan = new Frog(getImage("froggy.gif"),canvas);
+    juan = new Frog(getImage("froggy.gif"),canvas);
       // Draw the lane dividers
       int whichLine = 1;
       while (whichLine < NUM_LANES) {
@@ -99,7 +99,16 @@ public class Main extends WindowController implements KeyListener{
   public void	keyPressed(KeyEvent e)
   {
    if(e.getKeyCode() == KeyEvent.VK_LEFT){
-      
+      juan.setX(juan.getX()+10);
+    }
+    if(e.getKeyCode() == KeyEvent.VK_RIGHT){
+      juan.setX(juan.getX()+10);
+    }
+    if(e.getKeyCode() == KeyEvent.VK_UP){
+      juan.setX(juan.getX()+10);
+    }
+    if(e.getKeyCode() == KeyEvent.VK_DOWN){
+      juan.setX(juan.getX()+10);
     }
   }
  public void	keyReleased(KeyEvent e){

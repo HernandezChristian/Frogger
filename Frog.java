@@ -11,16 +11,16 @@ private static final double FROG_HEIGHT = 48;
 public boolean overlaps(VisibleImage vehicleImage){
   return frogImage.overlaps(vehicleImage);
 }
-  private void setX(int nx){
+  public void setX(int nx){
     x = nx;
   }
-  private int getX(){
+  public int getX(){
     return x;
   }
-  private void setY(int ny){
+  public void setY(int ny){
     y = ny;
   }
-  private int getY(){
+  public int getY(){
     return y;
   }
 }

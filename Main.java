@@ -98,7 +98,9 @@ public class Main extends WindowController implements KeyListener{
    }
   public void	keyPressed(KeyEvent e)
   {
-    
+   if(e.getKeyCode() == KeyEvent.VK_LEFT){
+      
+    }
   }
  public void	keyReleased(KeyEvent e){
    

@@ -38,7 +38,7 @@ public class Main extends WindowController implements KeyListener{
       // Draw the background
       FilledRect highway = new FilledRect (HIGHWAY_LEFT, HIGHWAY_TOP, 
                                            HIGHWAY_LENGTH, HIGHWAY_WIDTH, canvas);
-    juan = new Frog(getImage("froggy.gif"),canvas);
+    
       // Draw the lane dividers
       int whichLine = 1;
       while (whichLine < NUM_LANES) {
@@ -52,7 +52,7 @@ public class Main extends WindowController implements KeyListener{
         }
         whichLine = whichLine + 1;
       }
-      
+      juan = new Frog(getImage("froggy.gif"),canvas);
       // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
            
    }
@@ -99,16 +99,16 @@ public class Main extends WindowController implements KeyListener{
   public void	keyPressed(KeyEvent e)
   {
    if(e.getKeyCode() == KeyEvent.VK_LEFT){
-      juan.setX(juan.getX()+10);
+      juan.setX(juan.getX()-10);
     }
     if(e.getKeyCode() == KeyEvent.VK_RIGHT){
       juan.setX(juan.getX()+10);
     }
     if(e.getKeyCode() == KeyEvent.VK_UP){
-      juan.setX(juan.getX()+10);
+      juan.setY(juan.getY()-10);
     }
     if(e.getKeyCode() == KeyEvent.VK_DOWN){
-      juan.setX(juan.getX()+10);
+      juan.setY(juan.getY()+10);
     }
   }
  public void	keyReleased(KeyEvent e){

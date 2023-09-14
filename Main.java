@@ -5,7 +5,7 @@ import java.awt.event.KeyListener;
 public class Main extends WindowController implements KeyListener{
 
    // Constants defining the sizes of the background components.
-   private static final double HIGHWAY_LENGTH = 700;
+   private static final double HIGHWAY_LENGTH = 1000;
    private static final double LANE_WIDTH = 100;
    private static final int NUM_LANES = 4;
    private static final double HIGHWAY_WIDTH = LANE_WIDTH * NUM_LANES;
@@ -26,7 +26,7 @@ public class Main extends WindowController implements KeyListener{
    // instructions to create the frog and the Lane ActiveObjects.
    Frog juan;
    public static void main(String[] args) { 
-   new Main().startController(400,400); 
+   new Main().startController(1000,1000); 
 	} 
    
    public void begin()
@@ -99,16 +99,16 @@ public class Main extends WindowController implements KeyListener{
   public void	keyPressed(KeyEvent e)
   {
    if(e.getKeyCode() == KeyEvent.VK_LEFT){
-      juan.setX(juan.getX()-10);
+      juan.hop("L");
     }
     if(e.getKeyCode() == KeyEvent.VK_RIGHT){
-      juan.setX(juan.getX()+10);
+      juan.hop("R");
     }
     if(e.getKeyCode() == KeyEvent.VK_UP){
-      juan.setY(juan.getY()-10);
+      juan.hop("U");
     }
     if(e.getKeyCode() == KeyEvent.VK_DOWN){
-      juan.setY(juan.getY()+10);
+      juan.hop("D");
     }
   }
  public void	keyReleased(KeyEvent e){

@@ -24,3 +24,25 @@ public boolean overlaps(VisibleImage vehicleImage){
     return y;
   }
 }
+
+public void hop(String direction)
+	{
+		if(direction.equals("L"))
+	    {  setX(getX()-20);
+      }
+     
+    if(direction.equals("R"))
+	    {  setX(getX()+20);
+      }
+
+    // UP
+    if(direction.equals("U"))
+	    {  setY(getY()-20);
+      }
+
+    //DOWN
+    if(direction.equals("D"))
+	    {  setY(getY()+20);
+      }
+     
+	}

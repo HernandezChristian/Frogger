@@ -25,6 +25,7 @@ public class Main extends WindowController implements KeyListener{
    // This method currently just draws the highway.  You will have to add
    // instructions to create the frog and the Lane ActiveObjects.
    Frog juan;
+  Vehicle Mcqeen;
    public static void main(String[] args) { 
    new Main().startController(1000,1000); 
 	} 
@@ -53,7 +54,8 @@ public class Main extends WindowController implements KeyListener{
         whichLine = whichLine + 1;
       }
       juan = new Frog(getImage("froggy.gif"),canvas);
-      // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
+     Mcqeen = new Vehicle(50, 50, getImage("van_left.gif"), 1.0, canvas);
+    // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
            
    }
    

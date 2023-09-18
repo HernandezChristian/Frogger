@@ -30,10 +30,6 @@ public void hop(String direction){
       }
      
 	}
-  public boolean overlaps(visibleImage c){
-    
-  
-  return false;
-  }
+ 
   
 }

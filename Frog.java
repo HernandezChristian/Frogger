@@ -2,9 +2,11 @@ import objectdraw.*;
 import java.awt.*;
 public class Frog{
 private VisibleImage frogImage;
+private boolean isAlive;
 private static final double FROG_HEIGHT = 48;
   public Frog(Image i, DrawingCanvas c){
     frogImage = new VisibleImage(i, new Location(100,100), c);
+    isAlive = true;
   }
 public boolean overlaps(VisibleImage vehicleImage){
   return frogImage.overlaps(vehicleImage);
@@ -30,10 +32,13 @@ public void hop(String direction){
       }
      
 	}
-  public boolean overlaps(visibleImage c){
+  public void kill(){
     
-  
-  return false;
   }
-  
+  public void reincarnate(){
+    
+  }
+  public boolean isHeAlive(){
+    return isAlive;
+  }
 }

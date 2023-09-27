@@ -17,7 +17,12 @@ private int score;
     score = 0;
   }
 public boolean overlaps(VisibleImage vehicleImage){
-  return frogImage.overlaps(vehicleImage);
+  //return frogImage.overlaps(vehicleImage);
+  if(vehicleImage.getX() >= frogImage.getX() && vehicleImage.getX() <= frogImage.getX() + 48 && vehicleImage.getY() <= frogImage.getY() && vehicleImage.getY() >= frogImage.getY() - 48){
+    return true;
+  } else{
+    return false;
+  }
 }
 
 public void hop(String direction){

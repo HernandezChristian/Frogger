@@ -55,6 +55,7 @@ public class Main extends WindowController implements KeyListener{
       }
       juan = new Frog(getImage("froggy.gif"),canvas);
      Mcqeen = new Vehicle(50, 50, getImage("van_left.gif"), 1.0, canvas);
+     lp = new Lilypad(getImage("lily.jpg"), canvas);
     // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
            
    }

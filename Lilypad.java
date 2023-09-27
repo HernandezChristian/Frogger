@@ -1,11 +1,23 @@
 import objectdraw.*;
 import java.awt.*;
 public class Lilypad{
-  private VisibleImage LilyImage;
-  private VisibleImage LilyFrogImage;
-  private static final double LILYPAD_HEIGHT = 48;
-  public Lilypad (Image a,Image b, DrawingCanvas c){
-    LilyImage = new VisibleImage(a, new Location(100,100), c);
-    LilyFrogImage = new VisibleImage(b, new Location(300,100), c);
+  //ArrayList<VisibleImage> LilyImages = new ArrayList<VisibleImage>();
+  private Image LilyEmpty;
+  private VisibleImage LilyFrog;
+  
+  public Lilypad (Image i,Image LilyFrog, int x, int y, DrawingCanvas c){
+    LilyEmpty = i;
+    this.LilyFrog = LilyFrog;
+    LilyEmpty = new VisibleImage(i, new Location(300,300), c);
+     /* for(int i = 0; i < 5; i++){
+    LilyImages.add(new VisibleImage(a, new Location(x,y),  c));
+    }
+    */
+    //LilyFrogImage = new Image("lily.jpg");
+    //LilyEmpty = new Image("lilyFrog.jpg");
+      
   }
+
+  
+  
 }

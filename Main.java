@@ -104,6 +104,8 @@ public class Main extends WindowController implements KeyListener{
    }
   public void	keyPressed(KeyEvent e)
   {
+    for(int i = 0; i++; i<5)
+    if(juan.overlaps())
    if(e.getKeyCode() == KeyEvent.VK_LEFT){
       juan.hop("L");
     }

@@ -8,8 +8,8 @@ private boolean isAlive;
 private static final double FROG_HEIGHT = 48;
 private int lives;
 private int score;
-  public VisibleImage dead;
-  private DrawingCanvas can;
+public VisibleImage dead;
+private DrawingCanvas can;
   public Frog(Image i, DrawingCanvas c){
     frogImage = new VisibleImage(i, new Location(350,350), c);
     isAlive = true;
@@ -22,6 +22,7 @@ private int score;
 public boolean overlaps(VisibleImage vehicleImage){
   //return frogImage.overlaps(vehicleImage);
   if(vehicleImage.getX() >= frogImage.getX() && vehicleImage.getX() <= frogImage.getX() + 48 && vehicleImage.getY() <= frogImage.getY() && vehicleImage.getY() >= frogImage.getY() - 48){
+    kill();
     return true;
   } else{
     return false;

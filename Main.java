@@ -104,7 +104,7 @@ public class Main extends WindowController implements KeyListener{
    }
   public void	keyPressed(KeyEvent e)
   {
-    if(lp.overlaps(juan.getVi)) {
+    if(lp.overlaps(juan.getVi())) {
       juan.reincarnate();
       }
     

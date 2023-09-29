@@ -13,4 +13,7 @@ public class Lilypad{
     LilyImages.add(new VisibleImage(LilyEmpty, new Location(x +(i*145),y),100,40, c));
     }  
   }
+  public VisibleImage getVisImage(int i){
+    return LilyImages.get(i);
+  }
 }

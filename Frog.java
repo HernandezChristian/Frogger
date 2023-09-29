@@ -8,6 +8,7 @@ private boolean isAlive;
 private static final double FROG_HEIGHT = 48;
 private int lives;
 private int score;
+  public Image dead;
   private DrawingCanvas can;
   public Frog(Image i, DrawingCanvas c){
     frogImage = new VisibleImage(i, new Location(350,350), c);
@@ -15,6 +16,7 @@ private int score;
     can = c;
     lives = 3;
     score = 0;
+    dead
   }
 public boolean overlaps(VisibleImage vehicleImage){
   //return frogImage.overlaps(vehicleImage);

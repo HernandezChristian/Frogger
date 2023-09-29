@@ -4,14 +4,14 @@ import java.awt.*;
 public class Vehicle extends ActiveObject{
   private VisibleImage carImage;
  private double carSpeed;
-  boolean alive = true;
+  boolean IsAlive = true;
   private Frog juan;
 
-  public Vehicle(int carX, int carY, Image i, double speed, DrawingCanvas c, Frog x) {
+  public Vehicle(int carX, int carY, Image i, double speed, DrawingCanvas c, Frog sad) {
 
     carImage = new VisibleImage(i, new Location(carX, carY), c);
 carSpeed = speed;
-    juan = x;
+    juan = sad;
     this.start();
   }
 
@@ -21,16 +21,16 @@ carSpeed = speed;
   
     
 
-while( carImage.getX() < 1500 && carImage.getX() > -100 && alive){
+while( carImage.getX() < 1500 && carImage.getX() > -100 && IsAlive){
 
   long time = System.currentTimeMillis(); 
    pause(20.0);
     long Actualtime = System.currentTimeMillis() - time; 
       double distance = (carSpeed* Actualtime);
    carImage.move(distance, 0);
-    if  (juan.overlaps(carImage, true))
+    if  (juan.overlaps(carImage))
     {
-      alive = false;
+      IsAlive = false;
     }
 
    }

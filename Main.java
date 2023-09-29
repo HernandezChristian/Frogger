@@ -54,7 +54,7 @@ public class Main extends WindowController implements KeyListener{
         whichLine = whichLine + 1;
       }
       juan = new Frog(getImage("froggy.gif"),canvas);
-     Mcqeen = new Vehicle(50, 50, getImage("van_left.gif"), 1.0, canvas);
+     Mcqeen = new Vehicle(800, 20, getImage("van_left.gif"), 1.0, canvas);
     // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
            
    }

@@ -75,4 +75,7 @@ public void hop(String direction){
   public boolean isHeAlive(){
     return isAlive;
   }
+  public VisibleImage getVi(){
+    return frogImage;
+  }
 }

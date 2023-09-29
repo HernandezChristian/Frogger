@@ -56,7 +56,7 @@ public class Main extends WindowController implements KeyListener{
       }
       juan = new Frog(getImage("froggy.gif"),canvas);
 
-     Mcqeen = new Vehicle(50, 50, getImage("van_left.gif"), 1.0, canvas);
+     Mcqeen = new Vehicle(50, 50, getImage("van_left.gif"), 1.0, canvas, juan);
      lp = new Lilypad(getImage("lily.jpg"),getImage("lilyFrog.jpg"),0,0, canvas);
 
     // ADD YOUR CODE TO CREATE THE FROG AND THE LANES
@@ -104,8 +104,11 @@ public class Main extends WindowController implements KeyListener{
    }
   public void	keyPressed(KeyEvent e)
   {
-    for(int i = 0; i++; i<5)
-    if(juan.overlaps())
+    if(lp.overlaps(juan.getVi))
+      {
+      
+      }
+    
    if(e.getKeyCode() == KeyEvent.VK_LEFT){
       juan.hop("L");
     }
@@ -118,6 +121,7 @@ public class Main extends WindowController implements KeyListener{
     if(e.getKeyCode() == KeyEvent.VK_DOWN){
       juan.hop("D");
     }
+    
   }
  public void	keyReleased(KeyEvent e){
    
